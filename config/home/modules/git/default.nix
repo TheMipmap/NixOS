@@ -31,6 +31,7 @@ in
         "**/.vscode/**"
         "**/__pycache__/**"
         "**/.direnv__/**"
+        "**/NixOS/result/**"
       ];
     };
   };
