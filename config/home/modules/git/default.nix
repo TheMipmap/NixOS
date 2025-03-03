@@ -23,7 +23,15 @@ in
       userEmail = "morten-ks@hotmail.com";
       extraConfig = {
           init.defaultBranch = "main";
+          pull.rebase = true;
       };
+
+      # Add gitignores
+      ignores = [
+        "**/.vscode/**"
+        "**/__pycache__/**"
+        "**/.direnv__/**"
+      ];
     };
   };
 }
