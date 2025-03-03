@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./modules/direnv
     ./modules/discord
     ./modules/firefox
     ./modules/ghostty

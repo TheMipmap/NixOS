@@ -36,6 +36,7 @@
   #teams.enable = true;
 
   ##--- Other ---##
+  direnv.enable = true;
   git.enable = true;
   shell.enable = true;
 
