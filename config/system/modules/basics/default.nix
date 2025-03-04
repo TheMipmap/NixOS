@@ -10,6 +10,7 @@
     environment.systemPackages = with pkgs; [
       wget
       htop
+      unzip
       nixpkgs-fmt
     ];
 
