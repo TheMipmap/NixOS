@@ -114,6 +114,7 @@ in {
               ];
             };
             settings = defaultSettings;
+            bookmarks = {};
           };
         };
         policies.ExtensionSettings = {
