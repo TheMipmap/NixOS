@@ -39,7 +39,7 @@ in
     programs.bash = {
       enable = true;
       shellAliases = aliases;
-      historySize = 5000;
+      historySize = 10;
       historyFile = "$HOME/.bash_history";
     };
 
@@ -49,7 +49,7 @@ in
       shellAliases = aliases;
       history = {
         save = 5000;
-        size = 5000;
+        size = 10;
         path = "$HOME/.zsh_history";
         share = true;
         ignoreDups = true;
