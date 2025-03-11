@@ -9,6 +9,7 @@
 
   # Host-specific modules
   basics.enable = true;
+  bluetooth.enable = true;
   gnome.enable = true;
   grub.enable = true;
   network.enable = true;

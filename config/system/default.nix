@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./modules/basics
+    ./modules/bluetooth
     ./modules/gnome
     ./modules/grub
     ./modules/network
