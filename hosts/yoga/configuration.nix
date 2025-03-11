@@ -12,6 +12,7 @@
   bluetooth.enable = true;
   gnome.enable = true;
   grub.enable = true;
+  hyprland.enable = true;
   network.enable = true;
   nvidia.enable = true;
   pipewire.enable = true;

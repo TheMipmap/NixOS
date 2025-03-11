@@ -41,6 +41,9 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
 
+    # Enable OpenGL
+    hardware.opengl.enable = true;
+
     # Ensure NVIDIA kernel modules are loaded
     boot.extraModulePackages = [ config.boot.kernelPackages.nvidiaPackages.stable ];
   };

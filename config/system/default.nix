@@ -4,6 +4,7 @@
     ./modules/bluetooth
     ./modules/gnome
     ./modules/grub
+    ./modules/hyprland
     ./modules/network
     ./modules/nvidia
     ./modules/pipewire
