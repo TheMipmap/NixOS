@@ -11,28 +11,28 @@ let
   bookmarks = [
     {
       name = "Mail";
-      toolbar = true;
+      #toolbar = true;
       tags = [ "mail" ];
       url = "https://outlook.live.com/mail/0";
     }
     {
       name = "Moodle";
-      toolbar = true;
+      #toolbar = true;
       url = "https://www.moodle.aau.dk/my/";
     }
     {
       name = "GitHub";
-      toolbar = true;
+      #toolbar = true;
       url = "https://github.com/";
     }
     {
       name = "Overleaf";
-      toolbar = true;
+      #toolbar = true;
       url = "https://www.overleaf.com/project";
     }
     {
       name = "OneNote";
-      toolbar = true;
+      #toolbar = true;
       url = "https://aaudk-my.sharepoint.com/personal/";
     }
   ];
