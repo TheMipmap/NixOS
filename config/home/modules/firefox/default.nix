@@ -9,31 +9,16 @@ let
     sponsorblock
   ];
   bookmarks = [
-    {
-      name = "Mail";
-      #toolbar = true;
-      tags = [ "mail" ];
-      url = "https://outlook.live.com/mail/0";
-    }
-    {
-      name = "Moodle";
-      #toolbar = true;
-      url = "https://www.moodle.aau.dk/my/";
-    }
-    {
-      name = "GitHub";
-      #toolbar = true;
-      url = "https://github.com/";
-    }
-    {
-      name = "Overleaf";
-      #toolbar = true;
-      url = "https://www.overleaf.com/project";
-    }
-    {
-      name = "OneNote";
-      #toolbar = true;
-      url = "https://aaudk-my.sharepoint.com/personal/";
+  {
+    name = "Toolbar Bookmarks";
+    toolbar = true;
+    bookmarks = [
+        { name = "Mail"; tags = [ "mail" ]; url = "https://outlook.live.com/mail/0"; }
+        { name = "Moodle"; url = "https://www.moodle.aau.dk/my/"; }
+        { name = "GitHub"; url = "https://github.com/"; }
+        { name = "Overleaf"; url = "https://www.overleaf.com/project"; }
+        { name = "OneNote"; url = "https://aaudk-my.sharepoint.com/personal/"; }
+      ];
     }
   ];
   searchEngines = {
@@ -91,7 +76,7 @@ let
     "browser.uidensity" = 1;
     "browser.tabs.tabmanager.enabled" = false;
     "browser.fullscreen.autohide" = false;
-    "browser.toolbars.bookmarks.visibility" = "never";
+    "browser.toolbars.bookmarks.visibility" = "always";
     "sidebar.position_start" = false;
 
     # Prevent window from closing when last tab is closed
