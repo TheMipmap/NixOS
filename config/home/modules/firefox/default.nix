@@ -17,7 +17,7 @@ let
         { name = "Moodle"; url = "https://www.moodle.aau.dk/my/"; }
         { name = "GitHub"; url = "https://github.com/"; }
         { name = "Overleaf"; url = "https://www.overleaf.com/project"; }
-        { name = "OneNote"; url = "https://aaudk-my.sharepoint.com/personal/"; }
+        { name = "SharePoint"; url = "https://aaudk-my.sharepoint.com/"; }
       ];
     }
   ];
