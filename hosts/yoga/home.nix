@@ -33,7 +33,6 @@
   ghostty.enable = true;
   onedrive.enable = true;
   vscode.enable = true;
-  #teams.enable = true;
 
   ##--- Other ---##
   direnv.enable = true;
@@ -46,7 +45,7 @@
     desktop = null; # "${config.home.homeDirectory}/Desktop";
     documents = "${config.home.homeDirectory}/Documents";
     download = "${config.home.homeDirectory}/Downloads";
-    music = "${config.home.homeDirectory}/Music";
+    music = null; # "${config.home.homeDirectory}/Music";
     pictures = null; # "${config.home.homeDirectory}/Pictures";
     publicShare = null; # "${config.home.homeDirectory}/Public";
     templates = null; # "${config.home.homeDirectory}/Templates";

@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.shell;
-  dependencies = with pkgs; [ zoxide fzf python3];
+  dependencies = with pkgs; [ zoxide fzf ];
   aliases = {
     # Declare shell aliases
     "q" = "exit";
@@ -48,8 +48,8 @@ in
       enable = true;
       shellAliases = aliases;
       history = {
-        save = 5000;
-        size = 5000;
+        save = 15000;
+        size = 15000;
         path = "$HOME/.zsh_history";
         share = true;
         ignoreDups = true;
