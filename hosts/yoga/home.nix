@@ -10,7 +10,7 @@
     homeDirectory = "/home/morten";
     stateVersion = "24.11";
   };
-  
+
   ##--- Hardware ---##
   #hardware = {
   #  touchpad.enable = true;

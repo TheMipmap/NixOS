@@ -8,7 +8,6 @@ let
     "open" = "xdg-open";
     "cd.." = "cd .."; # The bane of my existence
     "nr" = "nixos-rebuild switch --flake ~/NixOS --use-remote-sudo";
-    "ls" = "sl -w -12 -d -a -l -G -c";
   };
 
 in

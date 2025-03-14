@@ -1,8 +1,9 @@
 { pkgs, lib, inputs, config, ... }:
 let
   cfg = config.ghostty;
-  dependencies = with pkgs; [  ];
-in {
+  dependencies = with pkgs; [ ];
+in
+{
   options = {
     ghostty = {
       enable = lib.mkEnableOption "Enable ghostty";
@@ -17,7 +18,7 @@ in {
     # Ghostty Configuration
     programs.ghostty = {
       enable = true;
-      
+
       # Settings
       settings = {
         clipboard-read = "allow";

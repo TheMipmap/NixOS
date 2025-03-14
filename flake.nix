@@ -28,7 +28,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/yoga/configuration.nix
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
