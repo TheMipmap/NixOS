@@ -12,7 +12,6 @@
       htop
       unzip
       nixpkgs-fmt
-      sl
     ];
 
     # Enable zsh
