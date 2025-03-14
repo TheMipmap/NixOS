@@ -15,15 +15,15 @@ in
     home = {
       packages = dependencies;
     };
-    
+
     # Define git user
     programs.git = {
       enable = true;
       userName = "Morten Stephansen";
       userEmail = "morten-ks@hotmail.com";
       extraConfig = {
-          init.defaultBranch = "main";
-          pull.rebase = true;
+        init.defaultBranch = "main";
+        pull.rebase = true;
       };
 
       # Add gitignores

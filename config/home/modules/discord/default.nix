@@ -2,7 +2,7 @@
 let
   cfg = config.discord;
   dependencies = with pkgs; [ discord ];
-in 
+in
 {
   options = {
     discord = {

@@ -27,7 +27,7 @@
     };
 
     # Enable non-free software & experimental features
-    nix.settings.experimental-features = ["nix-command" "flakes" ];
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
     nixpkgs.config.allowUnfree = true;
 
     # Automatic garbage collection & Nix store optimization
@@ -51,7 +51,7 @@
       LC_TELEPHONE = "da_DK.UTF-8";
       LC_TIME = "da_DK.UTF-8";
     };
-    
+
     # Enable hardware graphics
     hardware.graphics = {
       enable = true;

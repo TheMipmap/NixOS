@@ -9,10 +9,10 @@ let
     sponsorblock
   ];
   bookmarks = [
-  {
-    name = "Toolbar Bookmarks";
-    toolbar = true;
-    bookmarks = [
+    {
+      name = "Toolbar Bookmarks";
+      toolbar = true;
+      bookmarks = [
         { name = "Mail"; tags = [ "mail" ]; url = "https://outlook.live.com/mail/0"; }
         { name = "Moodle"; url = "https://www.moodle.aau.dk/my/"; }
         { name = "GitHub"; url = "https://github.com/"; }
@@ -22,9 +22,9 @@ let
     }
   ];
   searchEngines = {
-    "Google" = { 
+    "Google" = {
       definedAliases = [ "@g" ];
-      metaData = { hidden = true; }; 
+      metaData = { hidden = true; };
     };
     "GitHub" = {
       urls = [{ template = "https://github.com/search?q={searchTerms}&type=repositories"; }];
@@ -95,7 +95,8 @@ let
     "general.autoScroll" = false; # Enable autoscrolling
     "browser.aboutConfig.showWarning" = false; # Prevent about:config warning
   };
-in {
+in
+{
   imports = [ ];
 
   options = {
@@ -131,8 +132,8 @@ in {
           };
         };
         policies.ExtensionSettings = {
-            # pin bitwarden to the navbar
-            "446900e4-71c2-419f-a6a7-df9c091e268b" = { default_area = "navbar"; }; # Extension ID for bitwarden
+          # pin bitwarden to the navbar
+          "446900e4-71c2-419f-a6a7-df9c091e268b" = { default_area = "navbar"; }; # Extension ID for bitwarden
         };
       };
 
@@ -140,10 +141,10 @@ in {
         enable = true;
         mimeApps.enable = true;
         mimeApps.defaultApplications = {
-          "text/html" = ["firefox.desktop"];
-          "text/xml" = ["firefox.desktop"];
-          "x-scheme-handler/http" = ["firefox.desktop"];
-          "x-scheme-handler/https" = ["firefox.desktop"];
+          "text/html" = [ "firefox.desktop" ];
+          "text/xml" = [ "firefox.desktop" ];
+          "x-scheme-handler/http" = [ "firefox.desktop" ];
+          "x-scheme-handler/https" = [ "firefox.desktop" ];
         };
       };
     }
