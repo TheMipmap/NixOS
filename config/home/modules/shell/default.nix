@@ -8,8 +8,9 @@ let
     "open" = "xdg-open";
     "cd.." = "cd .."; # The bane of my existence
     "nr" = "nixos-rebuild switch --flake ~/NixOS --use-remote-sudo";
+    "ls" = "sl -w -12 -d -a -l -G -c";
   };
-    
+
 in
 {
   imports = [ ];
@@ -17,12 +18,12 @@ in
   options = {
     shell = {
       enable = lib.mkEnableOption "Enable shell configuration";
-      
+
       bash.enable = lib.mkOption {
         type = lib.types.bool;
         default = cfg.enable;
       };
-      
+
       zsh.enable = lib.mkOption {
         type = lib.types.bool;
         default = cfg.enable;
