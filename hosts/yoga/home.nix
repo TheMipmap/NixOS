@@ -17,7 +17,7 @@
   #};
 
   ##--- Hyprland ---##
-  #hyprland.enable = true;
+  hyprland.enable = true;
 
   ##--- Theme ---##
   #theme = {
