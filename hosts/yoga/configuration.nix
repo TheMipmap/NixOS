@@ -8,13 +8,19 @@
       ../../config/system/default.nix
     ];
 
+  # Desktop/Diplay managers
+  gnome = {
+    enable = true;
+    gdm.enable = false;
+  };
+  sddm.enable = true;
+  hyprland.enable = true;
+
   # Host-specific modules
   basics.enable = true;
   bluetooth.enable = true;
-  gnome.enable = true;
   gnupg.enable = true;
   grub.enable = true;
-  hyprland.enable = true;
   network.enable = true;
   nvidia.enable = true;
   pipewire.enable = true;

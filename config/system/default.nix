@@ -9,5 +9,6 @@
     ./modules/network
     ./modules/nvidia
     ./modules/pipewire
+    ./modules/sddm
   ];
 }

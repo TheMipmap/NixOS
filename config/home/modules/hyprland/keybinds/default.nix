@@ -47,6 +47,10 @@
       "$mainMod, right, Move Focus Right, movefocus, r"
       "$mainMod, up, Move Focus Up, movefocus, u"
       "$mainMod, down, Move Focus Down, movefocus, d"
+
+      ",XF86AudioRaiseVolume, , exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ",XF86AudioLowerVolume, , exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ",XF86AudioMute, , exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     ];
     
     bindel = [
