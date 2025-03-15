@@ -12,6 +12,7 @@
   basics.enable = true;
   bluetooth.enable = true;
   gnome.enable = true;
+  gnupg.enable = true;
   grub.enable = true;
   hyprland.enable = true;
   network.enable = true;
