@@ -9,5 +9,6 @@
     ./modules/onedrive
     ./modules/shell
     ./modules/vscode
+    ./modules/waybar
   ];
 }
