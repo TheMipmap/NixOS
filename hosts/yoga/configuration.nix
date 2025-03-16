@@ -19,7 +19,6 @@
   # Host-specific modules
   basics.enable = true;
   bluetooth.enable = true;
-  gnupg.enable = true;
   grub.enable = true;
   network.enable = true;
   nvidia.enable = true;

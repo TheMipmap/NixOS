@@ -37,6 +37,7 @@
   ##--- Other ---##
   direnv.enable = true;
   git.enable = true;
+  gnupg.enable = true;
   shell.enable = true;
 
   xdg.userDirs = {
