@@ -11,6 +11,7 @@
       wget
       htop
       unzip
+      tldr
       nixpkgs-fmt
     ];
 
