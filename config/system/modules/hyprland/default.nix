@@ -11,6 +11,17 @@
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
+    ###--- Test fix for slow startup times ---###
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      config = {
+        common.default = "gtk";
+        pantheon.default = "gtk";
+        gtk.default = "gtk";
+      };
+    };
+
     # Enable egl-wayland when using nvidia
     environment.systemPackages = with pkgs; (if (config.nvidia.enable == true) then [ egl-wayland ] else [ ]);
   };

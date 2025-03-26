@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.hyprland;
-  dependencies = with pkgs; [ rofi-wayland ];
+  dependencies = with pkgs; [ rofi-wayland font-awesome nerdfonts ];
 
 in
 {
@@ -47,6 +47,9 @@ in
             "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0" # Fix some dragging issues with XWayland
           ];
         };
+        extraConfig = ''
+          exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+        '';
       };
     }
   ]);

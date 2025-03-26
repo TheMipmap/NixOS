@@ -2,10 +2,6 @@
   
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
-    
-    bindls = [
-      "Shift_L&Super_L&XF86TouchpadOff, , exec, $terminal"
-    ];
 
     bindd = [
       ##--- General Window Controls ---##
@@ -13,8 +9,12 @@
       "$mainMod, O, Toggle Fullscreen Window, fullscreen,"
       "$mainMod, M, Logout Of Hyprland, exit, "
       "$mainMod, T, Start Terminal, exec, $terminal"
+      "$mainMod SHIFT, XF86TouchpadOff, Launch Terminal With CoPilot button, exec, $terminal"
       "$mainMod, F, Start File Manager, exec, $fileManager"
       "$mainMod, Space, Start Menu, exec, pkill rofi || $menu"
+      "$mainMod, V, Toggle Floating for Focused Window , togglefloating,"
+      "$mainMod, P, , pseudo," # dwindle
+      "$mainMod, J, , togglesplit," # dwindle
       
       ##--- Workspace Focus ---##
       "$mainMod, 1, Focus Workspace 1, workspace, 1"
@@ -28,6 +28,9 @@
       "$mainMod, 9, Focus Workspace 9, workspace, 9"
       "$mainMod, 0, Focus Workspace 10, workspace, 10"
       "$mainMod, BackSpace, Focus Most Recent Workspace, workspace, previous"
+      "$mainMod, mouse_down, Change Focus with Scroll, workspace, e+1"
+      "$mainMod, mouse_up, Change Focus with Scroll, workspace, e-1"
+
 
       ##--- Move Windows Between Workspaces ---##
       "$mainMod SHIFT, 1, Move Window to Workspace 1, movetoworkspace, 0"
@@ -47,16 +50,34 @@
       "$mainMod, right, Move Focus Right, movefocus, r"
       "$mainMod, up, Move Focus Up, movefocus, u"
       "$mainMod, down, Move Focus Down, movefocus, d"
+
+      ##--- Move Windows With Arrows ---##
+      "$mainMod SHIFT, left, Move Window Left, movewindow, l"
+      "$mainMod SHIFT, right, Move Window Right, movewindow, r"
+      "$mainMod SHIFT, up, Move Window Up, movewindow, u"
+      "$mainMod SHIFT, down, Move Window Down, movewindow, d"
+
+      ##--- Resize Windows With Arrows ---##
+      "$mainMod CTRL, left, Resize Window Left, resizeactive, -30 0"
+      "$mainMod CTRL, right, Resize Window Right, resizeactive, 30 0"
+      "$mainMod CTRL, up, Resize Window Up, resizeactive, 0 -30"
+      "$mainMod CTRL, down, Resize Window Down, resizeactive, 0 30"
+    ];
+
+    bindm = [
+      ##--- Move/Resize Windows With Mouse---##
+      "$mainMod, mouse:272, movewindow"
+      "$mainMod, mouse:273, resizewindow"
     ];
     
     bindel = [
       ##--- Set multimedia/brightness keys ---#
-      ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-      ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-      ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", 248, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" # XF86AudioMicMute didn't work on my laptop
+      ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+      ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
     ];
   };
 }

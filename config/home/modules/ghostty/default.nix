@@ -25,11 +25,7 @@ in
         clipboard-write = "allow";
         background-opacity = 0.90;
         background-blur = 20;
-        theme = "dark:catppuccin-mocha,light:catppuccin-latte";
-        font-family = "MonoLisa Variable";
-        font-size = 14;
-        font-feature = "-liga";
-        font-thicken = true;
+        gtk-single-instance = true; # Significant speedup for multiple instances
       };
     };
   };

@@ -12,7 +12,7 @@ in
       };
       wallpaper = lib.mkOption {
         type = lib.types.str;
-        default = "sunset.jpg";
+        default = "sunrise_new.jpg";
       };
     };
   };
@@ -30,12 +30,13 @@ in
 
     stylix = {
       enable = lib.mkDefault true;
-      autoEnable = true;
-      image = ../../../assets/${cfg.wallpaper};
+      autoEnable = false;
+      image = ../../../../resources/${cfg.wallpaper};
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${cfg.colorscheme}.yaml";
 
       targets = {
         gtk.enable = true;
+        waybar.enable = true;
       };
 
       iconTheme = {

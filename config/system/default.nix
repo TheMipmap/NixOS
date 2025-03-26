@@ -9,5 +9,6 @@
     ./modules/nvidia
     ./modules/pipewire
     ./modules/sddm
+    ./modules/theme
   ];
 }

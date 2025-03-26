@@ -1,8 +1,10 @@
 { ... }: {
   imports = [
+    ./modules/alacritty
     ./modules/direnv
     ./modules/discord
     ./modules/firefox
+    ./modules/foot
     ./modules/ghostty
     ./modules/git
     ./modules/gnupg

@@ -10,7 +10,7 @@
 
   # Desktop/Diplay managers
   gnome = {
-    enable = true;
+    enable = false;
     gdm.enable = false;
   };
   sddm.enable = true;
@@ -23,6 +23,7 @@
   network.enable = true;
   nvidia.enable = true;
   pipewire.enable = true;
+  theme.enable = true;
 
   # User Account
   users.users.morten = {

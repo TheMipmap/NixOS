@@ -28,7 +28,7 @@ in {
 
         general = {
           "gaps_in" = "5";
-          "gaps_out" = "15";
+          "gaps_out" = "10";
           "border_size" = "3";
           "resize_on_border" = "true" ; # Allow resizing windows by clicking and dragging on borders and gaps
           "allow_tearing" = "false";
@@ -60,7 +60,6 @@ in {
             enabled = "true";
             range = "4";
             render_power = "3";
-            color = "rgba(1a1a1aee)";
           };
 
           blur = {

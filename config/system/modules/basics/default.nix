@@ -12,6 +12,8 @@
       htop
       unzip
       tldr
+      yazi
+      brightnessctl
       nixpkgs-fmt
     ];
 
