@@ -39,6 +39,7 @@
   git.enable = true;
   gnupg.enable = true;
   shell.enable = true;
+  theme.enable = true;
 
   xdg.userDirs = {
     enable = true;

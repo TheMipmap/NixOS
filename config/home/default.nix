@@ -9,6 +9,7 @@
     ./modules/hyprland
     ./modules/onedrive
     ./modules/shell
+    ./modules/theme
     ./modules/vscode
     ./modules/waybar
   ];
