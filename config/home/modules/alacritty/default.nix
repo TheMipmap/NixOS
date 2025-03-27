@@ -21,10 +21,6 @@ in
         enable = true;
       };
 
-      # Alacritty Settings
-      programs.alacritty.settings = {
-        window.opacity = 0.80;
-      };
     }
     (lib.mkIf config.hyprland.enable {
         wayland.windowManager.hyprland.settings = {

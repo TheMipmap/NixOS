@@ -25,11 +25,6 @@ in
       programs.foot.settings = {
         main = {
           term = "xterm-256color";
-          dpi-aware = "yes";
-        };
-
-        colors = {
-          alpha = "0.9";
         };
 
         mouse = {

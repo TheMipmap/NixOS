@@ -30,9 +30,10 @@ in
 
     stylix = {
       enable = lib.mkDefault true;
-      autoEnable = false;
+      autoEnable = true;
       image = ../../../../resources/${cfg.wallpaper};
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${cfg.colorscheme}.yaml";
+      opacity.terminal = 0.85;
 
       targets = {
         gtk.enable = true;
