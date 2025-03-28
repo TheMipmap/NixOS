@@ -9,6 +9,11 @@
       enable = true;
       xwayland.enable = true;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      withUWSM = true;
+    };
+
+    environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1"; # Speedup electron apps
     };
 
     ###--- Test fix for slow startup times ---###

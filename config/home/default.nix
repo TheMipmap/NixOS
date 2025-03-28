@@ -14,5 +14,6 @@
     ./modules/theme
     ./modules/vscode
     ./modules/waybar
+    ./modules/wezterm
   ];
 }

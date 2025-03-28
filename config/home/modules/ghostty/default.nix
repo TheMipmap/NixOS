@@ -23,8 +23,6 @@ in
       settings = {
         clipboard-read = "allow";
         clipboard-write = "allow";
-        background-opacity = 0.90;
-        background-blur = 20;
         gtk-single-instance = true; # Significant speedup for multiple instances
       };
     };

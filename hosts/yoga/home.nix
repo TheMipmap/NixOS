@@ -28,13 +28,17 @@
 
   ##--- Applications ---###
   #calculator.enable = true;
-  alacritty.enable = true;
   discord.enable = true;
   firefox.enable = true;
-  foot.enable = true;
-  ghostty.enable = true;
   onedrive.enable = true;
   vscode.enable = true;
+
+
+  ##--- Terminal Emulators ---##
+  alacritty.enable = true;
+  foot.enable = true;
+  ghostty.enable = true;
+  wezterm.enable = true;
 
   ##--- Other ---##
   direnv.enable = true;
