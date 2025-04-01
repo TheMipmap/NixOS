@@ -28,7 +28,7 @@ in
           ##--- Set programs ---##
           "$terminal" = "ghostty";
           "$fileManager" = "nautilus";
-          "$menu" = "rofi -show drun";
+          "$menu" = "rofi -show drun -drun-display-format {name}";
 
           ##--- Set environment variables ---##
           env = [

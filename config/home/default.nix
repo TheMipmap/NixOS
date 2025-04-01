@@ -9,6 +9,7 @@
     ./modules/git
     ./modules/gnupg
     ./modules/hyprland
+    ./modules/hyprlock
     ./modules/onedrive
     ./modules/shell
     ./modules/theme
