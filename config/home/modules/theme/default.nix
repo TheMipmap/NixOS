@@ -18,13 +18,13 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home.file = {
-      ".resources" = {
-        source = ../../../../resources;
-        executable = false;
-        recursive = true;
-      };
-    };
+    # home.file = {
+    #   ".resources" = {
+    #     source = ../../../../resources;
+    #     executable = false;
+    #     recursive = true;
+    #   };
+    # };
 
     fonts.fontconfig.enable = true;
 
@@ -34,6 +34,7 @@ in
       image = ../../../../resources/${cfg.wallpaper};
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${cfg.colorscheme}.yaml";
       opacity.terminal = 0.85;
+      
 
       targets = {
         gtk.enable = true;

@@ -11,8 +11,8 @@ in {
 
     stylix = {
       enable = lib.mkDefault true;
-      autoEnable = false;
-      image = ../../../../resources/sunset.jpg;
+      autoEnable = true;
+      image = ../../../../resources/sunrise_new.jpg;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
       homeManagerIntegration = {
         autoImport = true;
