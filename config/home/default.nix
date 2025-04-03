@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./modules/alacritty
+    ./modules/calculator
     ./modules/direnv
     ./modules/discord
     ./modules/evince
