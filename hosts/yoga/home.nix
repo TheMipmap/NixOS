@@ -29,7 +29,9 @@
   ##--- Applications ---###
   #calculator.enable = true;
   discord.enable = true;
+  evince.enable = true;
   firefox.enable = true;
+  gimp.enable = true;
   onedrive.enable = true;
   vscode.enable = true;
 
