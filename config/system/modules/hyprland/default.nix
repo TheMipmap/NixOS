@@ -16,18 +16,7 @@
       NIXOS_OZONE_WL = "1"; # Speedup electron apps
     };
 
-    ###--- Test fix for slow startup times ---###
-    xdg.portal = {
-      enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      config = {
-        common.default = "gtk";
-        pantheon.default = "gtk";
-        gtk.default = "gtk";
-      };
-    };
-
     # Enable egl-wayland when using nvidia
-    environment.systemPackages = with pkgs; (if (config.nvidia.enable == true) then [ egl-wayland ] else [ ]);
+    environment.systemPackages = with pkgs; (if (config.nvidia.enable == true) then [ egl-wayland wayland-utils kdePackages.wayland-protocols ] else [ ]);
   };
 }

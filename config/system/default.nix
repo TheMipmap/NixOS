@@ -10,5 +10,6 @@
     ./modules/pipewire
     ./modules/sddm
     ./modules/theme
+    ./modules/tlp
   ];
 }

@@ -1,7 +1,13 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.hyprland;
-  dependencies = with pkgs; [ rofi-wayland font-awesome nerdfonts ];
+  dependencies = with pkgs; [ 
+    rofi-wayland
+    font-awesome
+    nerdfonts
+    libnotify
+    dunst
+    ];
 
 in
 {

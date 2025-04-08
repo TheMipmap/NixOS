@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.waybar;
-  dependencies = with pkgs; [ waybar ];
+  dependencies = with pkgs; [ ];
 
 in
 {
@@ -19,13 +19,16 @@ in
     {
       home.packages = dependencies;
 
-      home.file = {
-        ".config/waybar" = {
-          source = ./sources;
-          executable = false;
-          recursive = true;
-        };
+      # Remove default stylix css
+      stylix.targets.waybar.addCss = false;
+
+      programs.waybar = {
+        enable = true;
+
+        settings = lib.importJSON ./sources/config;
+        style = lib.mkAfter (builtins.readFile ./sources/style.css);
       };
+
     }
     (lib.mkIf config.hyprland.enable {
       wayland.windowManager.hyprland = {

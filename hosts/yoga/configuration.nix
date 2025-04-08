@@ -23,6 +23,7 @@
   network.enable = true;
   nvidia.enable = true;
   pipewire.enable = true;
+  tlp.enable = true;
   theme.enable = true;
 
   # User Account

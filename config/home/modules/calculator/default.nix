@@ -20,7 +20,7 @@ in
     (lib.mkIf config.hyprland.enable {
         wayland.windowManager.hyprland.settings = {
           bindel = [                                
-            ", XF86Calculator, exec, gnome-calculator"
+            ", XF86Calculator, exec, [float] gnome-calculator"
           ];
 
           # Mak
