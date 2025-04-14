@@ -5,8 +5,6 @@ let
     rofi-wayland
     font-awesome
     nerdfonts
-    libnotify
-    dunst
     ];
 
 in

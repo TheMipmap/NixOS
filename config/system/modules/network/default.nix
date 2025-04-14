@@ -13,6 +13,9 @@
     # Enable networking
     networking.networkmanager.enable = true;
 
+    # Ensure wireguard can be used
+    networking.firewall.checkReversePath = false;
+
     # Enable CUPS to print documents.
     services.printing.enable = true;
   };

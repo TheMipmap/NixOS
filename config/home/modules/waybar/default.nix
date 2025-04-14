@@ -25,8 +25,8 @@ in
       programs.waybar = {
         enable = true;
 
-        settings = lib.importJSON ./sources/config;
-        style = lib.mkAfter (builtins.readFile ./sources/style.css);
+        settings = lib.importJSON ./src/config.json;
+        style = lib.mkAfter (builtins.readFile ./src/style.css);
       };
 
     }
@@ -36,9 +36,9 @@ in
           "exec-once" = [
             "waybar"
           ];
-          # bindd = [
-          #   "$mod, w, Toggle Waybar, exec,  killall waybar || killall .waybar-wrapped || waybar"
-          # ];
+          bindd = [
+            "$mainMod, w, Toggle Waybar, exec,  killall waybar || killall .waybar-wrapped || waybar"
+          ];
         };
       };
     })

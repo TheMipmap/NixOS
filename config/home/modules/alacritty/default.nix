@@ -22,12 +22,12 @@ in
       };
 
     }
-    (lib.mkIf config.hyprland.enable {
-        wayland.windowManager.hyprland.settings = {
-          bindd = [                                
-            "$mainMod, A, Launch Alacritty, exec, alacritty" 
-          ];                                       
-        };
-    })
+    # (lib.mkIf config.hyprland.enable {
+    #     wayland.windowManager.hyprland.settings = {
+    #       bindd = [                                
+    #         "$mainMod, A, Launch Alacritty, exec, alacritty" 
+    #       ];                                       
+    #     };
+    # })
   ]);
 }
