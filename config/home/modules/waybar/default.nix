@@ -37,7 +37,7 @@ in
             "waybar"
           ];
           bindd = [
-            "$mainMod, w, Toggle Waybar, exec,  killall waybar || killall .waybar-wrapped || waybar"
+            "$mainMod, w, Toggle Waybar, exec,  pkill waybar || pkill .waybar-wrapped || waybar"
           ];
         };
       };

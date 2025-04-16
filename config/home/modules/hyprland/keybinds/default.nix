@@ -45,6 +45,10 @@
       "$mainMod SHIFT, 0, Move Window to Workspace 10, movetoworkspace, 10"
       "$mainMod SHIFT, BackSpace, Move Window to Recent Workspace, movetoworkspace, previous"
 
+      ##--- Special Workspace  ---##
+      "$mainMod, S, Toggle Special Workspace, togglespecialworkspace, extra1"
+      "$mainMod SHIFT, S, Move Window to Special Workspace, movetoworkspace, special:extra1"
+
       ##--- Move Focus With Arrows ---##
       "$mainMod, left, Move Focus Left, movefocus, l"
       "$mainMod, right, Move Focus Right, movefocus, r"

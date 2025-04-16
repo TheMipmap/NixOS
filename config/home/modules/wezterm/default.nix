@@ -10,14 +10,24 @@ in
     };
   };
 
-  config = lib.mkIf cfg.enable {
-    home = {
-      packages = dependencies;
-    };
+  config = lib.mkIf cfg.enable (lib.mkMerge [
+    {
+      home = {
+        packages = dependencies;
+      };
 
-    # Ghostty Configuration
-    programs.wezterm = {
-      enable = true;
-    };
-  };
+      # Enable wezterm
+      programs.wezterm = {
+        enable = true;
+      };
+
+    }
+    (lib.mkIf config.hyprland.enable {
+        wayland.windowManager.hyprland.settings = {
+          bindd = [                                
+            "$mainMod, A, Launch Wezterm, exec, wezterm" 
+          ];                                       
+        };
+    })
+  ]);
 }

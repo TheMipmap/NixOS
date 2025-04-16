@@ -15,6 +15,7 @@
     ./modules/hyprlock
     ./modules/onedrive
     ./modules/shell
+    ./modules/swaync
     ./modules/theme
     ./modules/vscode
     ./modules/waybar
