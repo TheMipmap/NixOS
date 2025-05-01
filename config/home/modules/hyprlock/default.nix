@@ -5,7 +5,8 @@ let
     ibm-plex
     hyprlock
   ];
-in {
+in
+{
   options = {
     hyprlock = {
       enable = lib.mkOption {
@@ -18,7 +19,7 @@ in {
   config = lib.mkIf cfg.enable (lib.mkMerge [
     {
       home.packages = dependencies;
-      
+
       programs.hyprlock = {
         enable = true;
         settings = {
@@ -42,23 +43,24 @@ in {
             # Current Date
             monitor = "";
             text = ''cmd[update:1000] echo "<span>$(date '+%A, %d %b')</span>"'';
-            #color = "rgba(205, 214, 244, 0.75)";
-            font_size = 50; # Was 25 before double for framework
+            color = "rgba(137, 180, 250, 0.75)"; # TODO: Convert to RGBA from stylix palette
+            font_size = 50;
             font_family = "IBM Plex Sans";
-            position = "0, -75";
+            position = "0, +75";
             halign = "center";
-            valign = "top";
-          } {
-            # Current Time
-            monitor = "";
-            text = ''cmd[update:1000] echo "$(date +'%H:%M')"'';
-            #color = "rgba(250, 179, 135, .75)";
-            font_size = 250; # Was 125 before double for framework
-            font_family = "IBM Plex Sans";
-            position = "0, -100";
-            halign = "center";
-            valign = "top";
-          }];
+            valign = "bottom";
+          }
+            {
+              # Current Time
+              monitor = "";
+              text = ''cmd[update:1000] echo "$(date +'%H:%M')"'';
+              color = "rgba(246, 140, 74, 0.75)";
+              font_size = 250;
+              font_family = "IBM Plex Sans";
+              position = "0, -100";
+              halign = "center";
+              valign = "top";
+            }];
 
           # input-field = [{
           #   monitor = "";
@@ -71,11 +73,11 @@ in {
       };
     }
     (lib.mkIf config.hyprland.enable {
-        wayland.windowManager.hyprland.settings = {
-          bindd = [                                
-            "$mainMod, L, Lock Screen, exec, hyprlock" 
-          ];                                       
-        };
+      wayland.windowManager.hyprland.settings = {
+        bindd = [
+          "$mainMod, L, Lock Screen, exec, hyprlock"
+        ];
+      };
     })
   ]);
 }
