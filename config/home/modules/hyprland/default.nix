@@ -1,11 +1,12 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.hyprland;
-  dependencies = with pkgs; [ 
+  dependencies = with pkgs; [
     rofi-wayland
+    rofi-power-menu
     font-awesome
     nerdfonts
-    ];
+  ];
 
 in
 {
@@ -31,7 +32,7 @@ in
         settings = {
           ##--- Set programs ---##
           "$terminal" = "ghostty";
-          "$fileManager" = "nautilus";
+          "$fileManager" = "wezterm start -- yazi";
           "$menu" = "rofi -show drun -drun-display-format {name}";
 
           ##--- Set environment variables ---##
@@ -44,7 +45,7 @@ in
           xwayland = {
             force_zero_scaling = "true";
           };
-          
+
           ##--- Window Rules ---##
           windowrulev2 = [
             "suppressevent maximize, class:.*" # Ignore maximize requests from apps.

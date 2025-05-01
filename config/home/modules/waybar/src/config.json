@@ -3,9 +3,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["pulseaudio","pulseaudio#microphone","backlight","bluetooth","custom/endpoint","tray"],
+        "modules-left": ["custom/shutdown_menu", "custom/endpoint", "pulseaudio","pulseaudio#microphone","backlight","bluetooth","custom/endpoint","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","battery","network","clock","custom/notification"],
+        "modules-right": ["group/expand", "custom/endpoint","battery","network","clock","custom/notification"],
 
 
         "hyprland/workspaces": {
@@ -124,7 +124,7 @@
                 "transition-to-left": true,
                 "click-to-reveal": true
             },
-            "modules": ["custom/expand","cpu","memory","temperature","custom/endpoint"]
+            "modules": ["custom/expand", "custom/endpoint","cpu","memory","temperature"]
         },
         "cpu": {
             "format": " {usage}%",
@@ -147,6 +147,10 @@
             "on-scroll-down": "brightnessctl s 1%-",
             "scroll-step": 2.5,
             "tooltip-format": "Brightness: {percent}%"
+        },
+        "custom/shutdown_menu": {
+            "format": "",
+            "on-click": "rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=shutdown/reboot/suspend/logout'"
         },
         "tray": {
             "icon-size": 14,
