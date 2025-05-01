@@ -1,5 +1,5 @@
 { ... }: {
-  
+
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 
@@ -15,7 +15,7 @@
       "$mainMod, V, Toggle Floating for Focused Window , togglefloating,"
       "$mainMod, P, , pseudo," # dwindle
       "$mainMod, J, , togglesplit," # dwindle
-      
+
       ##--- Workspace Focus ---##
       "$mainMod, 1, Focus Workspace 1, workspace, 1"
       "$mainMod, 2, Focus Workspace 2, workspace, 2"
@@ -46,8 +46,8 @@
       "$mainMod SHIFT, BackSpace, Move Window to Recent Workspace, movetoworkspace, previous"
 
       ##--- Special Workspace  ---##
-      "$mainMod, S, Toggle Special Workspace, togglespecialworkspace, extra1"
-      "$mainMod SHIFT, S, Move Window to Special Workspace, movetoworkspace, special:extra1"
+      "$mainMod, Tab, Toggle Special Workspace, togglespecialworkspace, extra1"
+      "$mainMod SHIFT, Tab, Move Window to Special Workspace, movetoworkspace, special:extra1"
 
       ##--- Move Focus With Arrows ---##
       "$mainMod, left, Move Focus Left, movefocus, l"
@@ -73,7 +73,7 @@
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
     ];
-    
+
     bindel = [
       ##--- Set multimedia/brightness keys ---#
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

@@ -13,6 +13,7 @@
     ./modules/gnupg
     ./modules/hyprland
     ./modules/hyprlock
+    ./modules/hyprshot
     ./modules/onedrive
     ./modules/shell
     ./modules/swaync
