@@ -7,7 +7,7 @@
       ##--- General Window Controls ---##
       "$mainMod, Q, Kill Active Window, killactive, "
       "$mainMod, O, Toggle Fullscreen Window, fullscreen,"
-      "$mainMod, M, Logout Of Hyprland, exit, "
+      "$mainMod, M, Show Power Menu, exec, rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=shutdown/reboot/suspend/logout'"
       "$mainMod, T, Start Terminal, exec, $terminal"
       "$mainMod SHIFT, XF86TouchpadOff, Launch Terminal With CoPilot button, exec, $terminal"
       "$mainMod, F, Start File Manager, exec, $fileManager"
