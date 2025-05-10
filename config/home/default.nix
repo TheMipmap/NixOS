@@ -2,6 +2,7 @@
   imports = [
     ./modules/alacritty
     ./modules/calculator
+    ./modules/chromium
     ./modules/direnv
     ./modules/discord
     ./modules/evince

@@ -28,6 +28,7 @@
 
   ##--- Applications ---###
   calculator.enable = true;
+  chromium.enable = true;
   discord.enable = true;
   evince.enable = true;
   firefox.enable = true;
