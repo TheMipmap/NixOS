@@ -28,9 +28,13 @@ in
       programs.rofi = {
         enable = true;
         package = pkgs.rofi-wayland;
-        plugins = with pkgs; [
-          (rofi-calc.override { rofi-unwrapped = rofi-wayland-unwrapped; })
-        ];
+        theme = lib.mkForce "material";
+        plugins = with pkgs;
+          [
+            (rofi-calc.override {
+              rofi-unwrapped = rofi-wayland-unwrapped;
+            })
+          ];
       };
 
       # Modify hyprland config
