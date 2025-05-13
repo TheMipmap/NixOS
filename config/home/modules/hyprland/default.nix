@@ -2,7 +2,6 @@
 let
   cfg = config.hyprland;
   dependencies = with pkgs; [
-    rofi-wayland
     rofi-power-menu
     font-awesome
     nerdfonts
@@ -25,6 +24,14 @@ in
     {
       # Install dependencies
       home.packages = dependencies;
+
+      programs.rofi = {
+        enable = true;
+        package = pkgs.rofi-wayland;
+        plugins = with pkgs; [
+          (rofi-calc.override { rofi-unwrapped = rofi-wayland-unwrapped; })
+        ];
+      };
 
       # Modify hyprland config
       wayland.windowManager.hyprland = {

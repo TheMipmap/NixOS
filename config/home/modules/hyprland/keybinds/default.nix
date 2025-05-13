@@ -82,6 +82,7 @@
       ", 248, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" # XF86AudioMicMute didn't work on my laptop
       ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
       ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ", XF86Calculator, exec, rofi -modi calc -show calc -no-show-match -no-sort"
     ];
   };
 }
