@@ -22,9 +22,17 @@ in
     (lib.mkIf config.hyprland.enable {
       wayland.windowManager.hyprland.settings = {
         bindd = [
-          "$mainMod SHIFT, S, Take Region Screenshot With Freeze, exec, hyprshot -m region --freeze -o ~/Pictures/Screenshots"
+          "$mainMod SHIFT, S, Take Region Screenshot, exec, hyprshot -m region -o ~/Pictures/Screenshots"
           ",Print, Take Window Screenshot, exec, hyprshot -m window -o ~/Pictures/Screenshots"
         ];
+
+        ##--- Remove black borders from screenshots ---##
+        layerrule = [
+          "noanim, hyprpicker"
+          "noanim, selection"
+        ];
+
+        # TODO: Fix that the selection cursor is visible in region screenshots
       };
     })
   ]);
