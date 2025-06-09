@@ -62,6 +62,11 @@ in
             "suppressevent maximize, class:.*" # Ignore maximize requests from apps.
             "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0" # Fix some dragging issues with XWayland
           ];
+
+          ##--- Misc Settings ---##
+          misc = {
+            focus_on_activate = true; # Focus windows when they are activated
+          };
         };
         extraConfig = ''
           exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
