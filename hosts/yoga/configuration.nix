@@ -21,7 +21,15 @@
   bluetooth.enable = true;
   grub.enable = true;
   network.enable = true;
-  nvidia.enable = true;
+  nvidia = {
+    enable = true;
+    demos.enable = true;
+    hybrid = {
+      enable = true;
+      amdgpuBusId = "PCI:63:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
   pipewire.enable = true;
   tlp.enable = true;
   theme.enable = true;
