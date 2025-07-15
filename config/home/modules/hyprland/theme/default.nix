@@ -1,7 +1,8 @@
 { pkgs, lib, inputs, config, ... }:
 let
   cfg = config.hyprland.theme;
-in {
+in
+{
   options = {
     hyprland.theme = {
       enable = lib.mkOption {
@@ -23,14 +24,14 @@ in {
     wayland.windowManager.hyprland.settings = (lib.mkMerge [
       {
         cursor = {
-          "no_hardware_cursors" = "true";
+          "no_hardware_cursors" = "false";
         };
 
         general = {
           "gaps_in" = "5";
           "gaps_out" = "10";
           "border_size" = "3";
-          "resize_on_border" = "true" ; # Allow resizing windows by clicking and dragging on borders and gaps
+          "resize_on_border" = "true"; # Allow resizing windows by clicking and dragging on borders and gaps
           "allow_tearing" = "false";
           "layout" = "dwindle";
         };
@@ -51,7 +52,7 @@ in {
 
         decoration = {
           rounding = "10";
-          
+
           active_opacity = "1.0";
           inactive_opacity = "1.0";
           fullscreen_opacity = "1.0";
