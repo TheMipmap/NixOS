@@ -23,10 +23,6 @@ in
 
     wayland.windowManager.hyprland.settings = (lib.mkMerge [
       {
-        cursor = {
-          "no_hardware_cursors" = "false";
-        };
-
         general = {
           "gaps_in" = "5";
           "gaps_out" = "10";

@@ -32,7 +32,10 @@ in
           "noanim, selection"
         ];
 
-        # TODO: Fix that the selection cursor is visible in region screenshots
+        ##--- Remove cursor from screenshots ---##
+        cursor = {
+          "no_hardware_cursors" = "false";
+        };
       };
     })
   ]);
