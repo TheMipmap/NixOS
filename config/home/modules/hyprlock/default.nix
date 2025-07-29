@@ -71,6 +71,35 @@ in
           # }];
         };
       };
+
+      ###- Configure Hypridle -###
+      services.hypridle = {
+        enable = true;
+
+        settings = {
+          general = {
+            lock_cmd = "pidof hyprlock || hyprlock"; # Only run one instance of hyprlock
+            before_sleep_cmd = "hyprlock";
+            after_sleep_cmd = "hyprctl dispatch dpms on";
+          };
+
+          listener = [
+            {
+              timeout = 60;
+              on-timeout = "hyprlock";
+            }
+            {
+              timeout = 240;
+              on-timeout = "hyprctl dispatch dpms off";
+              on-resume = "hyprctl dispatch dpms on";
+            }
+            {
+              timeout = 600;
+              on-timeout = "systemctl suspend";
+            }
+          ];
+        };
+      };
     }
     (lib.mkIf config.hyprland.enable {
       wayland.windowManager.hyprland.settings = {
