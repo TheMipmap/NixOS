@@ -34,6 +34,12 @@
   tlp.enable = true;
   theme.enable = true;
 
+  # Gaming
+  gaming = {
+    steam.enable = true;
+    minecraft.enable = true;
+  };
+
   # User Account
   users.users.morten = {
     isNormalUser = true;
