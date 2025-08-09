@@ -36,6 +36,7 @@
 
   # Gaming
   gaming = {
+    proton.enable = true;
     steam.enable = true;
     minecraft.enable = true;
   };
