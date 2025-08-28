@@ -41,6 +41,24 @@
           inputs.stylix.nixosModules.stylix
         ];
       };
+      cern-ws = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/cern-ws/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.mostepha = import ./hosts/cern-ws/home.nix;
+              backupFileExtension = "hm-backup";
+              extraSpecialArgs = { inherit inputs; };
+            };
+          }
+          inputs.stylix.nixosModules.stylix
+        ];
+      };
     };
   };
 }

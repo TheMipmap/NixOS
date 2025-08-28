@@ -2,12 +2,18 @@
 let
   dependencies = with pkgs; [ ];
 in {
-  options = { };
+  options = { 
+    hyprland.kb_layout = lib.mkOption {
+          type = lib.types.str;
+          description = "Keyboard layout (e.g. 'us', 'dk')";
+          default = "dk";
+    };
+  };
 
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.settings = {
       input = {
-        "kb_layout" = "dk";
+        "kb_layout" = config.hyprland.kb_layout;
         "kb_variant" = "";
         "kb_model" = "";
         "kb_options" = "";
