@@ -13,7 +13,13 @@ in
         type = lib.types.bool;
         default = config.hyprland.enable;
       };
+      timeout = lib.mkOption {
+        type = lib.types.int;
+        default = 120;
+        description = "Time in seconds before the screen is locked due to inactivity.";
+      };
     };
+
   };
 
   config = lib.mkIf cfg.enable (lib.mkMerge [
@@ -85,16 +91,16 @@ in
 
           listener = [
             {
-              timeout = 60;
+              timeout = config.hyprlock.timeout;
               on-timeout = "hyprlock";
             }
             {
-              timeout = 240;
+              timeout = config.hyprlock.timeout * 2;
               on-timeout = "hyprctl dispatch dpms off";
               on-resume = "hyprctl dispatch dpms on";
             }
             {
-              timeout = 600;
+              timeout = config.hyprlock.timeout * 4;
               on-timeout = "systemctl suspend";
             }
           ];

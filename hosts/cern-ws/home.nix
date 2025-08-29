@@ -16,6 +16,7 @@
     enable = true;
     kb_layout = "us";
   };
+  hyprlock.timeout = 180;
 
   ##--- Applications ---###
   chromium.enable = true;
