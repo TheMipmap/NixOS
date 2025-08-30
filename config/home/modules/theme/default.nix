@@ -39,6 +39,7 @@ in
       targets = {
         gtk.enable = true;
         waybar.enable = true;
+        firefox.profileNames = [ "Morten" ];
       };
 
       iconTheme = {

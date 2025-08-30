@@ -24,6 +24,7 @@
   evince.enable = true;
   firefox.enable = true;
   gimp.enable = true;
+  loupe.enable = true;
   onedrive.enable = false;
   vscode.enable = true;
 

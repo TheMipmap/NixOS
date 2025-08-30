@@ -13,6 +13,7 @@
     ./modules/hyprland
     ./modules/hyprlock
     ./modules/hyprshot
+    ./modules/loupe
     ./modules/onedrive
     ./modules/shell
     ./modules/swaync

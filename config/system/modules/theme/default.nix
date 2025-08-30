@@ -24,7 +24,6 @@ in
         console.enable = true;
         gtk.enable = true;
         nixos-icons.enable = true;
-        firefox.profileNames = [ "Morten" ];
       };
 
       cursor = {
