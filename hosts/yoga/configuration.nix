@@ -36,9 +36,10 @@
 
   # Gaming
   gaming = {
+    lutris.enable = true;
+    minecraft.enable = true;
     proton.enable = true;
     steam.enable = true;
-    minecraft.enable = true;
   };
 
   # User Account

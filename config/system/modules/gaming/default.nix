@@ -4,8 +4,9 @@ let
 in
 {
   imports = [
+    ./lutris
+    ./minecraft
     ./proton
     ./steam
-    ./minecraft
   ];
 }
