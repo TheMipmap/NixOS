@@ -49,6 +49,6 @@
     shell = pkgs.zsh;
   };
 
-  system.stateVersion = "24.11"; # Yes, I did.
+  system.stateVersion = "25.05"; # Yes, I did.
 
 }

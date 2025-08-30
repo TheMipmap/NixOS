@@ -1,7 +1,8 @@
 { pkgs, lib, config, inputs, ... }:
 let
   cfg = config.theme;
-in {
+in
+{
   options = {
     theme.enable = lib.mkEnableOption "enables theme";
   };
@@ -23,6 +24,7 @@ in {
         console.enable = true;
         gtk.enable = true;
         nixos-icons.enable = true;
+        firefox.profileNames = [ "Morten" ];
       };
 
       cursor = {

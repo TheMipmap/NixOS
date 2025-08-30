@@ -80,7 +80,7 @@ in
       ];
 
       dotDir = ".config/zsh";
-      initExtra = ''
+      initContent = ''
         eval "$(zoxide init --cmd cd zsh)"
         bindkey '^f' autosuggest-accept
         bindkey '^k' history-search-backward

@@ -22,7 +22,7 @@ let
     }
   ];
   searchEngines = {
-    "Google" = {
+    "google" = {
       definedAliases = [ "@g" ];
       metaData = { hidden = true; };
     };
@@ -44,12 +44,11 @@ let
       }];
       definedAliases = [ "@np" ];
     };
-    "Amazon.com" = { metaData = { hidden = true; }; };
-    "Bing" = { metaData = { hidden = true; }; };
-    "DuckDuckGo" = { metaData = { hidden = true; }; };
-    "eBay" = { metaData = { hidden = true; }; };
-    "google" = { metaData = { hidden = true; }; };
-    "Wikipedia (en)" = { metaData = { hidden = true; }; };
+    "amazondotcom-fr" = { metaData = { hidden = true; }; };
+    "bing" = { metaData = { hidden = true; }; };
+    "ddg" = { metaData = { hidden = true; }; };
+    "ebay" = { metaData = { hidden = true; }; };
+    "wikipedia" = { metaData = { hidden = true; }; };
   };
   defaultSettings = {
     # Disable irritating first-run stuff
@@ -115,20 +114,23 @@ in
           "${profileName}" = {
             name = "${profileName}";
             isDefault = true;
-            extensions = extensions;
+            extensions.packages = extensions;
             search = {
               force = true;
-              default = "Google";
+              default = "google";
               engines = searchEngines;
               order = [
-                "Google"
+                "google"
                 "GitHub"
                 "Youtube"
                 "Nix Packages"
               ];
             };
             settings = defaultSettings;
-            bookmarks = bookmarks;
+            bookmarks = {
+              force = true;
+              settings = bookmarks;
+            };
           };
         };
         policies.ExtensionSettings = {

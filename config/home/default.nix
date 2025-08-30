@@ -1,6 +1,5 @@
 { ... }: {
   imports = [
-    ./modules/alacritty
     ./modules/chromium
     ./modules/direnv
     ./modules/discord

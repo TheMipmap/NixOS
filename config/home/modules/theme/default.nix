@@ -34,7 +34,7 @@ in
       image = ../../../../resources/${cfg.wallpaper};
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${cfg.colorscheme}.yaml";
       opacity.terminal = 0.85;
-      
+
 
       targets = {
         gtk.enable = true;
@@ -51,7 +51,7 @@ in
 
     wayland.windowManager.hyprland.settings = {
       "exec-once" = [
-        "hyprctl setcursor size 24"
+        "hyprctl setcursor size 48"
       ];
     };
   };

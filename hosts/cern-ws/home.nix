@@ -28,7 +28,6 @@
   vscode.enable = true;
 
   ##--- Terminal Emulators ---##
-  alacritty.enable = true;
   foot.enable = true;
   ghostty.enable = true;
   wezterm.enable = true;

@@ -4,7 +4,7 @@ let
   dependencies = with pkgs; [
     rofi-power-menu
     font-awesome
-    nerdfonts
+    nerd-fonts.jetbrains-mono
   ];
 
 in

@@ -8,7 +8,7 @@
   home = {
     username = "morten";
     homeDirectory = "/home/morten";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
 
   ##--- Hardware ---##
@@ -37,7 +37,6 @@
 
 
   ##--- Terminal Emulators ---##
-  alacritty.enable = true;
   foot.enable = true;
   ghostty.enable = true;
   wezterm.enable = true;
