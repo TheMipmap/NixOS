@@ -14,7 +14,7 @@
   ##--- Hyprland ---##
   hyprland = {
     enable = true;
-    kb_layout = "us";
+    kb_layout = "us,dk";
   };
   hyprlock.timeout = 180;
 
