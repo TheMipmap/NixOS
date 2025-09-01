@@ -4,7 +4,7 @@ let
 in
 {
   imports = [
-    ./lutris
+    ./heroic
     ./minecraft
     ./proton
     ./steam

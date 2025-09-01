@@ -1,15 +1,11 @@
-# Lutris is a video game preservation platform that you can use to play 
-# or emulate pretty much any game you want, including games from Epic Games.
-# https://wiki.nixos.org/wiki/Lutris
-
 { pkgs, lib, config, ... }:
 let
-  cfg = config.gaming.lutris;
+  cfg = config.gaming.heroic;
 in
 {
 
-  options.gaming.lutris = {
-    enable = lib.mkEnableOption "enable lutris";
+  options.gaming.heroic = {
+    enable = lib.mkEnableOption "enable heroic";
   };
 
   config = lib.mkIf cfg.enable {
@@ -22,15 +18,15 @@ in
       }
     ];
 
-    # Install lutris
+    # Install heroic
     environment.systemPackages = with pkgs; [
-      lutris
+      heroic
     ];
 
     # If any games are unable to run due to missing dependencies, 
     # they can be installed using the following methods.
     # environment.systemPackages = with pkgs; [
-    #   (lutris.override {
+    #   (heroic.override {
     #     extraLibraries = pkgs: [
     #       # List library dependencies here
     #     ];
@@ -39,16 +35,6 @@ in
     #     ];
     #   })
     # ];
-
-    # Esync compatibility
-    systemd.extraConfig = "DefaultLimitNOFILE=524288";
-    security.pam.loginLimits = [{
-      domain = "yourusername";
-      type = "hard";
-      item = "nofile";
-      value = "524288";
-    }];
-
   };
 
 }

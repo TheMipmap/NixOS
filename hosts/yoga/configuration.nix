@@ -36,7 +36,7 @@
 
   # Gaming
   gaming = {
-    lutris.enable = true;
+    heroic.enable = true;
     minecraft.enable = true;
     proton.enable = true;
     steam.enable = true;
