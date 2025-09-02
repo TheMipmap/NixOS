@@ -28,7 +28,6 @@ in
         settings = lib.importJSON ./src/config.json;
         style = lib.mkAfter (builtins.readFile ./src/style.css);
       };
-
     }
     (lib.mkIf config.hyprland.enable {
       wayland.windowManager.hyprland = {
