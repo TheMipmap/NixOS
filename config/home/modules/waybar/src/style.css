@@ -48,7 +48,6 @@ tooltip {
     padding: 0px 5px;
     transition: all .3s ease;
     color:@base07;
-
 }
 #workspaces {
     padding: 0px 5px;
@@ -91,18 +90,14 @@ tooltip {
     transition: all .3s ease;
     color:@base07;
 }
-#network{
+#custom-kb_layout{
     padding: 0px 5px;
-    transition: all .3s ease;
     color:@base07;
-
 }
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
     color:@base07;
-
-
 }
 #battery.charging {
     color: #26A65B;
@@ -141,7 +136,6 @@ tooltip {
     padding: 0px 5px;
     transition: all .3s ease; 
     color:@base07;
-
 }
 #custom-endpoint{
     color:alpha(@base07,1);
@@ -150,7 +144,6 @@ tooltip {
 #tray{
     padding: 0px 5px;
     transition: all .3s ease; 
-
 }
 #tray menu * {
     padding: 0px 5px;

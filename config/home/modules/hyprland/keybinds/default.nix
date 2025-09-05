@@ -66,6 +66,9 @@
       "$mainMod CTRL, right, Resize Window Right, resizeactive, 30 0"
       "$mainMod CTRL, up, Resize Window Up, resizeactive, 0 -30"
       "$mainMod CTRL, down, Resize Window Down, resizeactive, 0 30"
+
+      ##--- Change KB Layout ---##
+      "ALT, space, Change the keyboard layout, exec, $HOME/.config/waybar/scripts/switch_kb_layout.sh"
     ];
 
     bindm = [

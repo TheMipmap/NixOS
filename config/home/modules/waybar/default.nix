@@ -1,8 +1,7 @@
 { pkgs, lib, config, ... }:
 let
   cfg = config.waybar;
-  dependencies = with pkgs; [ ];
-
+  dependencies = with pkgs; [ jq ];
 in
 {
   options = {
@@ -21,6 +20,22 @@ in
 
       # Remove default stylix css
       stylix.targets.waybar.addCss = false;
+
+      # Link scripts to Waybar config
+      home.file = {
+        ".config/waybar/scripts/get_main_kb.sh" = {
+          source = ./scripts/get_main_kb.sh;
+          executable = true;
+        };
+        ".config/waybar/scripts/show_kb_layout.sh" = {
+          source = ./scripts/show_kb_layout.sh;
+          executable = true;
+        };
+        ".config/waybar/scripts/switch_kb_layout.sh" = {
+          source = ./scripts/switch_kb_layout.sh;
+          executable = true;
+        };
+      };
 
       programs.waybar = {
         enable = true;

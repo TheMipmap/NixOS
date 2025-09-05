@@ -11,13 +11,11 @@
     stateVersion = "25.05";
   };
 
-  ##--- Hardware ---##
-  #hardware = {
-  #  touchpad.enable = true;
-  #};
-
   ##--- Hyprland ---##
-  hyprland.enable = true;
+  hyprland = {
+    enable = true;
+    kb_layout = "dk";
+  };
 
   ##--- Theme ---##
   #theme = {

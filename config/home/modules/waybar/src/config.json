@@ -5,7 +5,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/shutdown_menu", "custom/endpoint", "pulseaudio","pulseaudio#microphone","backlight","bluetooth","custom/endpoint","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand", "custom/endpoint","battery","hyprland/language","clock","custom/notification"],
+        "modules-right": ["group/expand", "custom/endpoint","battery","custom/kb_layout","clock","custom/notification"],
 
 
         "hyprland/workspaces": {
@@ -46,10 +46,13 @@
                 "on-click-right": "mode"
             }
         },
-        "hyprland/language": {
-            "format": " {}",
-            "format-dk": "DK",
-            "format-en": "US"
+        "custom/kb_layout": {
+            "format": "{}",
+            "exec": "~/.config/waybar/scripts/show_kb_layout.sh",
+            "return-type": "text",
+            "interval": "once",
+            "signal": 10,
+            "on-click": ""
         },
         "bluetooth": {
             "format-on": "",
