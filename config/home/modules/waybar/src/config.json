@@ -49,7 +49,8 @@
         "hyprland/language": {
             "format": " {}",
             "format-dk": "DK",
-            "format-en": "US"
+            "format-en": "US",
+            "on-click": "hyprctl switchxkblayout $(~/.config/waybar/scripts/get_main_kb.sh) next"
         },
         "bluetooth": {
             "format-on": "",
