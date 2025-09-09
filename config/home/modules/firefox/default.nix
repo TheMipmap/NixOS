@@ -21,8 +21,31 @@ let
       ];
     }
   ];
+  bookmarksCERN = [
+    {
+      name = "Toolbar Bookmarks";
+      toolbar = true;
+      bookmarks = [
+        { name = "Mattermost"; url = "https://mattermost.web.cern.ch/"; }
+        { name = "Jira"; url = "https://its.cern.ch/jira/secure/RapidBoard.jspa?rapidView=7926&projectKey=OS&view=planning.nodetail&quickFilter=22503&issueLimit=100#"; }
+        { name = "GitLab"; url = "https://gitlab.cern.ch/";}
+        { name = "Mail"; tags = [ "mail" ]; url = "https://outlook.live.com/mail/0"; }
+        { name = "EDH"; url = "https://edh.cern.ch/";}
+        { name = "IRC - Ironic"; url = "https://www.irccloud.com/irc/oftc/channel/openstack-ironic"; }
+        {
+          name = "Docs";
+          bookmarks = [
+            { name = "CCI - Internal Docs"; url = "https://cci-internal-docs.web.cern.ch/"; }
+            { name = "Cloud Docs"; url = "https://clouddocs.web.cern.ch/index.html"; }
+            { name = "CCI - Architecture"; url = "https://cci-architecture.docs.cern.ch/"; }
+        ];
+        }
+      ];
+    }
+  ];
   searchEngines = {
     "google" = {
+      urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
       definedAliases = [ "@g" ];
       metaData = { hidden = true; };
     };
@@ -50,6 +73,59 @@ let
     "ebay" = { metaData = { hidden = true; }; };
     "wikipedia" = { metaData = { hidden = true; }; };
   };
+  profiles = {
+    "${profileName}" = {
+      id = 0;
+      name = "${profileName}";
+      isDefault = false;
+      extensions.packages = extensions;
+      search = {
+        force = false;
+        default = "google";
+        engines = searchEngines;
+        order = [
+          "google"
+          "GitHub"
+          "Youtube"
+          "Nix Packages"
+        ];
+      };
+      settings = defaultSettings;
+      bookmarks = {
+        force = true;
+        settings = bookmarks;
+      };
+    };
+    "CERN" = {
+      id = 1;
+      name = "CERN";
+      isDefault = false;
+      extensions.packages = extensions;
+      search = {
+        force = true;
+        default = "google";
+        engines = searchEngines;
+        order = [
+          "google"
+          "GitHub"
+          "Youtube"
+          "Nix Packages"
+        ];
+      };
+      settings = defaultSettings;
+      bookmarks = {
+        force = true;
+        settings = bookmarksCERN;
+      };
+    };
+  };
+  # Dynamically inject isDefault into chosen profile
+  adjustedProfiles =
+    lib.mapAttrs (name: profile:
+      profile // {
+        isDefault = (name == cfg.defaultProfile);
+      }
+    ) profiles;
   defaultSettings = {
     # Disable irritating first-run stuff
     "browser.disableResetPrompt" = true;
@@ -100,6 +176,11 @@ in
 
   options = {
     firefox.enable = lib.mkEnableOption "enables firefox";
+    firefox.defaultProfile = lib.mkOption {
+      type = lib.types.str;
+      default = "${profileName}";
+      description = "Name of the default Firefox profile";
+    };
   };
 
   config = lib.mkIf cfg.enable (lib.mkMerge [
@@ -110,29 +191,7 @@ in
 
       programs.firefox = {
         enable = true;
-        profiles = {
-          "${profileName}" = {
-            name = "${profileName}";
-            isDefault = true;
-            extensions.packages = extensions;
-            search = {
-              force = true;
-              default = "google";
-              engines = searchEngines;
-              order = [
-                "google"
-                "GitHub"
-                "Youtube"
-                "Nix Packages"
-              ];
-            };
-            settings = defaultSettings;
-            bookmarks = {
-              force = true;
-              settings = bookmarks;
-            };
-          };
-        };
+        profiles = adjustedProfiles;
         policies.ExtensionSettings = {
           # pin bitwarden to the navbar
           "446900e4-71c2-419f-a6a7-df9c091e268b" = { default_area = "navbar"; }; # Extension ID for bitwarden

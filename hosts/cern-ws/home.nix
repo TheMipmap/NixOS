@@ -22,7 +22,10 @@
   chromium.enable = true;
   discord.enable = true;
   evince.enable = true;
-  firefox.enable = true;
+  firefox = {
+    enable = true;
+    defaultProfile = "CERN";
+  };
   gimp.enable = true;
   loupe.enable = true;
   onedrive.enable = false;
