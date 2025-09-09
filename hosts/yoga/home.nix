@@ -17,13 +17,6 @@
     kb_layout = "dk";
   };
 
-  ##--- Theme ---##
-  #theme = {
-  #  enable = true;
-  #  colorscheme = "catppuccin-mocha";
-  #  wallpaper = "biking_sunset.jpg";
-  #};
-
   ##--- Applications ---###
   chromium.enable = true;
   discord.enable = true;
@@ -33,7 +26,6 @@
   loupe.enable = true;
   onedrive.enable = true;
   vscode.enable = true;
-
 
   ##--- Terminal Emulators ---##
   foot.enable = true;
