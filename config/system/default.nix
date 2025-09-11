@@ -2,6 +2,7 @@
   imports = [
     ./modules/basics
     ./modules/bluetooth
+    ./modules/cachix
     ./modules/gaming
     ./modules/gnome
     ./modules/grub
