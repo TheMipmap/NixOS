@@ -14,11 +14,11 @@
   ##--- Hyprland ---##
   hyprland = {
     enable = true;
-    kb_layout = "dk";
+    kb_layout = "dk,us";
   };
 
   ##--- Applications ---###
-  chromium.enable = true;
+  chromium.enable = false;
   discord.enable = true;
   evince.enable = true;
   firefox.enable = true;
