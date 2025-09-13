@@ -15,7 +15,7 @@ in
       };
       timeout = lib.mkOption {
         type = lib.types.int;
-        default = 120;
+        default = 240;
         description = "Time in seconds before the screen is locked due to inactivity.";
       };
     };
