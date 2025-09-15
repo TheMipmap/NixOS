@@ -20,6 +20,7 @@
   ##--- Applications ---###
   chromium.enable = false;
   discord.enable = true;
+  element.enable = true;
   evince.enable = true;
   firefox.enable = true;
   gimp.enable = true;

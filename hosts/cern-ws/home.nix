@@ -21,6 +21,7 @@
   ##--- Applications ---###
   chromium.enable = true;
   discord.enable = true;
+  element.enable = true;
   evince.enable = true;
   firefox = {
     enable = true;

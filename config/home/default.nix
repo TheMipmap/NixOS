@@ -3,6 +3,7 @@
     ./modules/chromium
     ./modules/direnv
     ./modules/discord
+    ./modules/element
     ./modules/evince
     ./modules/firefox
     ./modules/foot
