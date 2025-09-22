@@ -30,6 +30,7 @@
   gimp.enable = true;
   loupe.enable = true;
   onedrive.enable = false;
+  remmina.enable = true;
   vscode.enable = true;
 
   ##--- Terminal Emulators ---##

@@ -16,6 +16,7 @@
     ./modules/hyprshot
     ./modules/loupe
     ./modules/onedrive
+    ./modules/remmina
     ./modules/shell
     ./modules/swaync
     ./modules/theme
