@@ -28,9 +28,9 @@ let
       bookmarks = [
         { name = "Mattermost"; url = "https://mattermost.web.cern.ch/"; }
         { name = "Jira"; url = "https://its.cern.ch/jira/secure/RapidBoard.jspa?rapidView=7926&projectKey=OS&view=planning.nodetail&quickFilter=22503&issueLimit=100#"; }
-        { name = "GitLab"; url = "https://gitlab.cern.ch/";}
+        { name = "GitLab"; url = "https://gitlab.cern.ch/"; }
         { name = "Mail"; tags = [ "mail" ]; url = "https://outlook.live.com/mail/0"; }
-        { name = "EDH"; url = "https://edh.cern.ch/";}
+        { name = "EDH"; url = "https://edh.cern.ch/"; }
         { name = "IRC - Ironic"; url = "https://www.irccloud.com/irc/oftc/channel/openstack-ironic"; }
         {
           name = "Docs";
@@ -38,7 +38,7 @@ let
             { name = "CCI - Internal Docs"; url = "https://cci-internal-docs.web.cern.ch/"; }
             { name = "Cloud Docs"; url = "https://clouddocs.web.cern.ch/index.html"; }
             { name = "CCI - Architecture"; url = "https://cci-architecture.docs.cern.ch/"; }
-        ];
+          ];
         }
       ];
     }
@@ -121,11 +121,13 @@ let
   };
   # Dynamically inject isDefault into chosen profile
   adjustedProfiles =
-    lib.mapAttrs (name: profile:
-      profile // {
-        isDefault = (name == cfg.defaultProfile);
-      }
-    ) profiles;
+    lib.mapAttrs
+      (name: profile:
+        profile // {
+          isDefault = (name == cfg.defaultProfile);
+        }
+      )
+      profiles;
   defaultSettings = {
     # Disable irritating first-run stuff
     "browser.disableResetPrompt" = true;
