@@ -69,9 +69,23 @@ in
           };
         };
         extraConfig = ''
-          exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+          exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+          exec-once = export XDG_CURRENT_DESKTOP=Hyprland
+          exec-once = export XDG_SESSION_TYPE=wayland
         '';
       };
+
+      # XDG portal setup
+      xdg.portal = {
+        enable = true;
+        xdgOpenUsePortal = true;
+        extraPortals = [
+          config.wayland.windowManager.hyprland.portalPackage
+          pkgs.xdg-desktop-portal-gtk
+        ];
+        config.common.default = "hyprland";
+      };
+
     }
   ]);
 }
