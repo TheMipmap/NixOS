@@ -29,6 +29,12 @@
       '';
     };
 
+    # Enable vim TODO: Move to seperate module
+    programs.neovim = {
+      enable = true;
+      vimAlias = true;
+    };
+
     # Enable non-free software & experimental features
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     nixpkgs.config.allowUnfree = true;
