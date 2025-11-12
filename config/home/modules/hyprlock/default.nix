@@ -66,7 +66,19 @@ in
               position = "0, -100";
               halign = "center";
               valign = "top";
-            }];
+            }
+            {
+              # Seconds
+	      monitor = "";
+	      text = ''cmd[update:1000] echo "$(date +'%S')"'';
+	      color = "rgba(246, 140, 74, 0.75)";
+	      font_size = 125;
+	      font_family = "IBM Plex Sans";
+	      position = "550, -275";
+	      halign = "center";
+	      valign = "top";
+	    }
+	    ];
 
           # input-field = [{
           #   monitor = "";
